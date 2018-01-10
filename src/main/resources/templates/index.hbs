@@ -1,0 +1,33 @@
+{{#partial "content"}}
+
+    <h1>Add an Event</h1>
+
+    <form action="/new" method="POST">
+        <label for="name">Name of Event</label>
+        <input id="name" name="name" type="text">
+
+        <label for="type">Type of Event</label>
+        <input id="type" name="type" type="text">
+
+        <label for="date">Date</label>
+        <input id="date" name="date" type="text">
+
+        <label for="time">Time</label>
+        <input id="time" name="time" type="text">
+
+        <label for="details">Details</label>
+        <input id="details" name="details" type="text">
+
+        <label for="price">Price</label>
+        <input id="price" name="price" type="number">
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <form action="/display" method="GET">
+        <button type="submit">Show all</button>
+    </form>
+
+{{/partial}}
+
+{{> layout.hbs}}

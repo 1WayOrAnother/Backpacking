@@ -1,0 +1,17 @@
+
+{{#partial "content"}}
+
+    <h1>List of Events:</h1>
+    {{#if allEvents}}
+        {{#each allEvents}}
+            <p><a href="/{{id}}">Event: {{name}}</a></p>
+
+            <p>-----------------------------------------</p>
+        {{/each}}
+    {{else}}
+        <p>You have no events. You are boring. You will die alone with cats.</p>
+    {{/if}}
+
+{{/partial}}
+
+{{> layout.hbs}}

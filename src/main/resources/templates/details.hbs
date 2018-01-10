@@ -1,0 +1,37 @@
+
+{{#partial "content"}}
+    <p>Event: {{event.name}}</p>
+    <p>Type of Event: {{event.type}}</p>
+    <p>Date of Event: {{event.date}}</p>
+    <p>Time of Event: {{event.time}}</p>
+    <p>Event Details: {{event.details}}</p>
+    <p>Price: {{event.price}}</p>
+
+    <form action="events/{{event.id}}/update" method="get">
+        <label for="name">Name of Event</label>
+        <input id="name" name="name" type="text">
+
+        <label for="type">Type of Event</label>
+        <input id="type" name="type" type="text">
+
+        <label for="date">Date</label>
+        <input id="date" name="date" type="text">
+
+        <label for="time">Time</label>
+        <input id="time" name="time" type="text">
+
+        <label for="details">Details</label>
+        <input id="details" name="details" type="text">
+
+        <label for="price">Price</label>
+        <input id="price" name="price" type="number">
+
+        <button type="submit">Change Event</button>
+    </form>
+
+    <form action="events/{{event.id}}/delete" method="post">
+        <button type="submit">Delete Event</button>
+    </form>
+{{/partial}}
+
+{{> layout.hbs}}
